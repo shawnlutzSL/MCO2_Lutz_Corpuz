@@ -127,6 +127,7 @@ public class DisplayController {
      * if not, then it is the display's inventory.
      */
     public void setProducts() {
+        hideEmptyMessage();
         if (!isReturning)
             productTable.getItems().setAll(display.getProducts());
         else
@@ -183,3 +184,4 @@ public class DisplayController {
         this.display = display;
     }
 }
+
