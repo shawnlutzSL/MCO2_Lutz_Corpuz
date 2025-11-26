@@ -54,13 +54,25 @@ public class CheckoutController {
         totalAmount = 0.0;
         if (!shopper.getHandCarried().isEmpty()) {
             productTable.getItems().setAll(shopper.getHandCarried());
-            for (Product product : shopper.getHandCarried())
-                totalAmount += product.getPrice();
+            for (Product product : shopper.getHandCarried()) {
+                if (shopper.getAge() >= 60 && product.isConsumable() && !product.isBeverage())
+                    totalAmount += product.getPrice() * .8;
+                else if (shopper.getAge() >= 60 && product.isBeverage() && !product.getName().equalsIgnoreCase("ALCOHOL"))
+                    totalAmount += product.getPrice() * .9;
+                else
+                    totalAmount += product.getPrice();
+            }
         }
         else if (shopper.getEquipment() != null && !shopper.getEquipment().getProducts().isEmpty()) {
             productTable.getItems().setAll(shopper.getEquipment().getProducts());
-            for (Product product : shopper.getEquipment().getProducts())
-                totalAmount += product.getPrice();
+            for (Product product : shopper.getEquipment().getProducts()) {
+                if (shopper.getAge() >= 60 && product.isConsumable() && !product.isBeverage())
+                    totalAmount += product.getPrice() * .8;
+                else if (shopper.getAge() >= 60 && product.isBeverage() && !product.getName().equalsIgnoreCase("ALCOHOL"))
+                    totalAmount += product.getPrice() * .9;
+                else
+                    totalAmount += product.getPrice();
+            }
         } else {
             payButton.setVisible(false);
             showEmptyMessage();
