@@ -1,0 +1,6 @@
+Name                 Product              Brand                     Serial                    Price
+----------------------------------------------------------------------------------------------------------------
+(1) CLEANING_AGENTS  All-Purpose Cleaner  ShinyEase                 CLE00304             PHP   719.01
+(2) CLEANING_AGENTS  Window Cleaner       Scrubwell                 CLE00303             PHP   391.55
+
+Total Price:	PHP  1110.56

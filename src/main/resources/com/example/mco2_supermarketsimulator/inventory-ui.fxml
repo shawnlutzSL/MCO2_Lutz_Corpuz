@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefWidth="792" prefHeight="792" style="-fx-background-color: rgba(20,20,20,0.85); -fx-padding: 20;"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.mco2_supermarketsimulator.InventoryController"
+            fx:id="rootPane">
+
+    <Label text="Inventory" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="0"
+           AnchorPane.rightAnchor="0"
+           style="-fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold;
+                  -fx-font-family: Poppins; -fx-alignment: center;" />
+
+    <Label fx:id="equipmentLabel" text="Equipment:" AnchorPane.topAnchor="50" AnchorPane.leftAnchor="0"
+           style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-family: Poppins;" />
+
+    <TableView fx:id="productTable" AnchorPane.topAnchor="80" AnchorPane.leftAnchor="0"
+               AnchorPane.rightAnchor="0" prefHeight="320"
+               style="-fx-background-color: rgba(40,40,40,0.5); -fx-text-fill: white; -fx-font-family: Poppins;">
+        <columns>
+            <TableColumn fx:id="colName" text="Name" prefWidth="150"/>
+            <TableColumn fx:id="colType" text="Type" prefWidth="150"/>
+            <TableColumn fx:id="colBrand" text="Brand" prefWidth="150"/>
+            <TableColumn fx:id="colSerial" text="Serial" prefWidth="150"/>
+            <TableColumn fx:id="colPrice" text="Price" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <Label fx:id="emptyLabel" text="(Inventory is currently empty)" AnchorPane.topAnchor="185"
+           AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" visible="false"
+           style="-fx-text-fill: #bbbbbb; -fx-font-size: 16px; -fx-font-family: Poppins;" />
+
+    <HBox spacing="20" AnchorPane.topAnchor="420" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
+          style="-fx-alignment: center;">
+        <Button fx:id="continueButton" text="Continue"
+                style="-fx-font-weight: bold; -fx-background-color: #30c6d1; -fx-text-fill: black; -fx-padding: 10 18;
+                       -fx-font-family: Poppins;" onMouseEntered="#animateGrow" onMouseExited="#animateShrink"/>
+    </HBox>
+
+</AnchorPane>

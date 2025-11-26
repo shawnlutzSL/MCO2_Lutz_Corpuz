@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.mco2_supermarketsimulator.MainMenuController"
+            prefWidth="792" prefHeight="792">
+
+    <TextField fx:id="nameField" AnchorPane.topAnchor="200" AnchorPane.leftAnchor="300" AnchorPane.rightAnchor="300"
+               promptText="Enter name" style="-fx-font-family: Poppins; -fx-font-size: 14px;"/>
+
+    <TextField fx:id="ageField" AnchorPane.topAnchor="240" AnchorPane.leftAnchor="300" AnchorPane.rightAnchor="300"
+               promptText="Enter age" style="-fx-font-family: Poppins; -fx-font-size: 14px;"/>
+
+    <Button fx:id="playButton" text="Play" AnchorPane.topAnchor="290" AnchorPane.leftAnchor="300" AnchorPane.rightAnchor="300"
+            style="-fx-font-weight: bold; -fx-background-color: #2b2d42; -fx-text-fill: white;
+            -fx-font-family: Poppins; -fx-padding: 8 18; -fx-font-size: 28px;"/>
+</AnchorPane>

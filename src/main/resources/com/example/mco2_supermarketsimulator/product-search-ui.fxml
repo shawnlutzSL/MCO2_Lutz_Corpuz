@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefWidth="600" prefHeight="450" style="-fx-background-color: rgba(20,20,20,0.85); -fx-padding: 20;"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.mco2_supermarketsimulator.ProductSearchController"
+            fx:id="rootPane">
+
+    <Label text="Product Search" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
+           style="-fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; -fx-font-family: Poppins;"/>
+
+    <HBox spacing="10" AnchorPane.topAnchor="50" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <TextField fx:id="searchField" promptText="Enter product name..." prefWidth="300"
+                   style="-fx-background-color: #333; -fx-text-fill: white; -fx-prompt-text-fill: #888; -fx-font-family: Poppins;"/>
+
+        <Button fx:id="searchButton" text="Search for Product"
+                style="-fx-font-weight: bold; -fx-background-color: #11ff00; -fx-text-fill: black; -fx-padding: 8 16;
+                -fx-font-family: Poppins;"
+                onMouseEntered="#animateGrow" onMouseExited="#animateShrink"/>
+
+        <Button fx:id="continueButton" text="Continue"
+                style="-fx-font-weight: bold; -fx-background-color: #30c6d1; -fx-text-fill: black; -fx-padding: 10 18;
+                -fx-font-family: Poppins;" onMouseEntered="#animateGrow" onMouseExited="#animateShrink"/>
+    </HBox>
+
+    <TableView fx:id="displayTable" AnchorPane.topAnchor="100" AnchorPane.leftAnchor="0"
+               prefWidth="200" prefHeight="320"
+               style="-fx-background-color: rgba(40,40,40,0.5); -fx-text-fill: white; -fx-font-family: Poppins;">
+        <columns>
+            <TableColumn fx:id="colAddress" text="Address" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+    <Label fx:id="emptyLabel" text="No products found." layoutX="20" layoutY="200"
+           visible="false" style="-fx-text-fill: #bbbbbb; -fx-font-size: 32px; -fx-font-family: Verdana;"/>
+
+</AnchorPane>

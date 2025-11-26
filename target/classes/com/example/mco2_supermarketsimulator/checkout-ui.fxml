@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefWidth="792" prefHeight="792" style="-fx-background-color: rgba(20,20,20,0.85); -fx-padding: 20;"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.mco2_supermarketsimulator.CheckoutController"
+            fx:id="rootPane">
+
+    <Label fx:id="displayTitle" text="Checkout Counter" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="0"
+           AnchorPane.rightAnchor="0"
+           style="-fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; -fx-font-family: Poppins; -fx-alignment: center;"/>
+
+    <TableView fx:id="productTable" AnchorPane.topAnchor="50" AnchorPane.leftAnchor="0"
+               AnchorPane.rightAnchor="0" prefHeight="320"
+               style="-fx-background-color: rgba(40,40,40,0.5); -fx-text-fill: white; -fx-font-family: Poppins;">
+        <columns>
+            <TableColumn fx:id="colName" text="Name" prefWidth="150"/>
+            <TableColumn fx:id="colType" text="Type" prefWidth="150"/>
+            <TableColumn fx:id="colBrand" text="Brand" prefWidth="150"/>
+            <TableColumn fx:id="colSerial" text="Serial" prefWidth="150"/>
+            <TableColumn fx:id="colPrice" text="Price" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <Label fx:id="emptyLabel" text="(No products in checkout)" AnchorPane.topAnchor="185"
+           AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" visible="false"
+           style="-fx-text-fill: #bbbbbb; -fx-font-size: 16px; -fx-font-family: Poppins;"/>
+
+    <VBox spacing="10" AnchorPane.topAnchor="380" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <Label text="Total Amount Due:" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-family: Poppins;"/>
+        <Label fx:id="totalAmountLabel" text="PHP 0.00" style="-fx-text-fill: #11ff00; -fx-font-size: 20px; -fx-font-weight: bold; -fx-font-family: Poppins;"/>
+        <HBox spacing="10">
+            <Label text="Amount to Pay:" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-family: Poppins;"/>
+            <TextField fx:id="amountField" promptText="Enter amount" prefWidth="150" style="-fx-font-family: Poppins;"/>
+        </HBox>
+        <Label fx:id="changeAmountLabel" text="PHP 0.00" style="-fx-text-fill: #11ff00; -fx-font-size: 20px; -fx-font-weight: bold; -fx-font-family: Poppins;"/>
+    </VBox>
+
+    <HBox spacing="20" AnchorPane.topAnchor="560" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <Button fx:id="payButton" text="Pay"
+                style="-fx-font-weight: bold; -fx-background-color: #11ff00; -fx-text-fill: black; -fx-padding: 10 18; -fx-font-family: Poppins;"
+                onMouseEntered="#animateGrow" onMouseExited="#animateShrink"/>
+        <Button fx:id="continueButton" text="Continue/Exit"
+                style="-fx-font-weight: bold; -fx-background-color: #30c6d1; -fx-text-fill: black; -fx-padding: 10 18; -fx-font-family: Poppins;"
+                onMouseEntered="#animateGrow" onMouseExited="#animateShrink"/>
+    </HBox>
+
+</AnchorPane>
