@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"com.example.mco2_supermarketsimulator","l":"com.example.mco2_supermarketsimulator"}];updateSearchResults();

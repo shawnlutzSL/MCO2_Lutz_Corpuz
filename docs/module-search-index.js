@@ -1,0 +1,1 @@
+moduleSearchIndex = [{"l":"com.example.mco2_supermarketsimulator"}];updateSearchResults();
